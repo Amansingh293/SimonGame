@@ -35,6 +35,8 @@ document.addEventListener('keypress' , function(event){
 
 function nextSequence(){
 
+    userClickedPattern = [];
+    
     level++;
 
     const levelIndication = document.querySelector('h2');
@@ -81,7 +83,7 @@ function checkAnswer(currentIndex){
     if( userClickedPattern[currentIndex] === gamePattern[currentIndex]){
 
         if( userClickedPattern.length === gamePattern.length ){
-            userClickedPattern = [];
+            
             setTimeout(() => {
                 nextSequence()
             }, 500);
