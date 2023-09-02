@@ -76,14 +76,15 @@ clicked.addEventListener('click' , function(event){
 
 // this will check if pushed color by user is matched or not
 function checkAnswer(currentIndex){
-
+    console.log(userClickedPattern);
+    console.log(gamePattern);
     if( userClickedPattern[currentIndex] === gamePattern[currentIndex]){
 
         if( userClickedPattern.length === gamePattern.length ){
             userClickedPattern = [];
             setTimeout(() => {
                 nextSequence()
-            }, 1000);
+            }, 500);
         }
 
     }
@@ -101,6 +102,8 @@ function checkAnswer(currentIndex){
         start = false;
         level = 0;
 
+        gamePattern = [];
+        
         setTimeout(() => {
            position.remove(); 
             bodyColor.style.backgroundColor = 'rgb(54, 69, 79)';
