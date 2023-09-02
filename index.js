@@ -36,7 +36,7 @@ document.addEventListener('keypress' , function(event){
 function nextSequence(){
 
     userClickedPattern = [];
-    
+
     level++;
 
     const levelIndication = document.querySelector('h2');
@@ -78,8 +78,7 @@ clicked.addEventListener('click' , function(event){
 
 // this will check if pushed color by user is matched or not
 function checkAnswer(currentIndex){
-    console.log(userClickedPattern);
-    console.log(gamePattern);
+
     if( userClickedPattern[currentIndex] === gamePattern[currentIndex]){
 
         if( userClickedPattern.length === gamePattern.length ){
